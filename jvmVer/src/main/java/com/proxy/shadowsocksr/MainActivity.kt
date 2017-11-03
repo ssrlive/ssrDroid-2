@@ -150,19 +150,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                     Consts.STATUS_CONNECTED    ->
                     {
                         switchUI(false)
-                        Snackbar.make(coordinatorLayout, R.string.connected,
+                        Snackbar.make(coordinatorLayout!!, R.string.connected,
                                 Snackbar.LENGTH_SHORT).show()
                     }
                     Consts.STATUS_FAILED       ->
                     {
                         switchUI(true)
-                        Snackbar.make(coordinatorLayout, R.string.connect_failed,
+                        Snackbar.make(coordinatorLayout!!, R.string.connect_failed,
                                 Snackbar.LENGTH_SHORT).show()
                     }
                     Consts.STATUS_DISCONNECTED ->
                     {
                         switchUI(true)
-                        Snackbar.make(coordinatorLayout, R.string.disconnected,
+                        Snackbar.make(coordinatorLayout!!, R.string.disconnected,
                                 Snackbar.LENGTH_SHORT).show()
                     }
                 }
@@ -230,7 +230,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         {
             if (ssrs != null && ssrs!!.status())
             {
-                Snackbar.make(coordinatorLayout, "Please disconnect first.",
+                Snackbar.make(coordinatorLayout!!, "Please disconnect first.",
                         Snackbar.LENGTH_SHORT).show()
                 return true
             }
@@ -332,7 +332,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
     {
         if (ssrs == null)
         {
-            Snackbar.make(coordinatorLayout, "VPN process not connected",
+            Snackbar.make(coordinatorLayout!!, "VPN process not connected",
                     Snackbar.LENGTH_SHORT).show()
             return
         }
@@ -384,7 +384,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                     {
                         DialogManager.dismissTipDialog()
                         switchUI(true)
-                        Snackbar.make(coordinatorLayout, R.string.connect_failed,
+                        Snackbar.make(coordinatorLayout!!, R.string.connect_failed,
                                 Snackbar.LENGTH_SHORT).show()
                     }
                 }
@@ -421,7 +421,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                 {
                     DialogManager.dismissTipDialog()
                     switchUI(true)
-                    Snackbar.make(coordinatorLayout, R.string.connect_failed,
+                    Snackbar.make(coordinatorLayout!!, R.string.connect_failed,
                             Snackbar.LENGTH_SHORT).show()
                 }
             }
@@ -444,7 +444,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                                     pro.passwd, pro.tcpProtocol, pro.obfsMethod, pro.obfsParam)
                             loadServerList()
                             pref!!.reloadPref()
-                            Snackbar.make(coordinatorLayout, R.string.add_success,
+                            Snackbar.make(coordinatorLayout!!, R.string.add_success,
                                     Snackbar.LENGTH_SHORT).show()
                             return
                         }
@@ -452,11 +452,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                 }
                 else if (resultCode == Activity.RESULT_CANCELED)
                 {
-                    Snackbar.make(coordinatorLayout, R.string.add_canceled,
+                    Snackbar.make(coordinatorLayout!!, R.string.add_canceled,
                             Snackbar.LENGTH_SHORT).show()
                     return
                 }
-                Snackbar.make(coordinatorLayout, R.string.add_failed, Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(coordinatorLayout!!, R.string.add_failed, Snackbar.LENGTH_SHORT).show()
             }
         }
     }

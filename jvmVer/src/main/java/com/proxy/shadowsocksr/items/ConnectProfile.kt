@@ -111,6 +111,7 @@ class ConnectProfile : Parcelable
 
     companion object
     {
+        @JvmField
         val CREATOR: Parcelable.Creator<ConnectProfile> = object : Parcelable.Creator<ConnectProfile>
         {
             override fun createFromParcel(pin: Parcel): ConnectProfile

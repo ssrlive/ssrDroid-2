@@ -24,7 +24,7 @@ object CryptoManager
         var key: ByteArray
         if (cachedKeys.containsKey(k))
         {
-            key = cachedKeys.getOrImplicitDefault(k)
+            key = cachedKeys.get(k)!!
         }
         else
         {
@@ -50,6 +50,6 @@ object CryptoManager
 
     fun getCipherInfo(name: String): IntArray
     {
-        return cipherList.getOrImplicitDefault(name)
+        return cipherList.get(name)!!
     }
 }
