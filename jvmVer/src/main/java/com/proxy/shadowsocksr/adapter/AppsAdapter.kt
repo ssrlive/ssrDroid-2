@@ -34,7 +34,7 @@ class AppsAdapter(private val appLst: List<AppItem>) : RecyclerView.Adapter<Apps
         return appLst.size
     }
 
-    public inner class ViewHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener
+    inner class ViewHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener
     {
         var iv: ImageView
         var tv: TextView
@@ -42,9 +42,9 @@ class AppsAdapter(private val appLst: List<AppItem>) : RecyclerView.Adapter<Apps
 
         init
         {
-            iv = v.findViewById(R.id.iv) as ImageView
-            tv = v.findViewById(R.id.tv_name) as TextView
-            cb = v.findViewById(R.id.cb) as CheckBox
+            iv = v.findViewById(R.id.iv)
+            tv = v.findViewById(R.id.tv_name)
+            cb = v.findViewById(R.id.cb)
             v.setOnClickListener(this)
         }
 
@@ -54,7 +54,7 @@ class AppsAdapter(private val appLst: List<AppItem>) : RecyclerView.Adapter<Apps
             {
                 cb.isChecked = !cb.isChecked
                 appLst[adapterPosition].checked = cb.isChecked
-                onItemClickListener!!.onItemClick(v, adapterPosition)
+                onItemClickListener?.onItemClick(v, adapterPosition)
             }
         }
     }

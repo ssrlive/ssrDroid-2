@@ -31,9 +31,9 @@ class ProxyAppsActivity : AppCompatActivity(), AppsAdapter.OnItemClickListener
         toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         val ab = delegate.supportActionBar
-        ab.setDisplayShowHomeEnabled(true)
-        ab.setDisplayHomeAsUpEnabled(true)
-        ab.setSubtitle(R.string.proxy_tip)
+        ab?.setDisplayShowHomeEnabled(true)
+        ab?.setDisplayHomeAsUpEnabled(true)
+        ab?.setSubtitle(R.string.proxy_tip)
 
         rvApps = findViewById(R.id.rv_proxy_apps) as RecyclerView
         rvApps!!.layoutManager = LinearLayoutManager(this)

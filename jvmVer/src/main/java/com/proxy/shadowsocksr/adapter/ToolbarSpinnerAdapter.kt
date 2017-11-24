@@ -42,7 +42,7 @@ class ToolbarSpinnerAdapter(var items: List<String>) : BaseAdapter()
             v!!.tag = "DROPDOWN"
         }
 
-        val textView = v.findViewById(android.R.id.text1) as TextView
+        val textView = v.findViewById<TextView>(android.R.id.text1)
         textView.text = getTitle(position)
 
         return v
@@ -57,7 +57,7 @@ class ToolbarSpinnerAdapter(var items: List<String>) : BaseAdapter()
                     parent, false)
             v!!.tag = "NON_DROPDOWN"
         }
-        val textView = v.findViewById(android.R.id.text1) as TextView
+        val textView = v.findViewById<TextView>(android.R.id.text1)
         textView.text = getTitle(position)
         return v
     }
