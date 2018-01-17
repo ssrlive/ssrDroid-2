@@ -566,6 +566,7 @@ ifeq ($(TARGET_SIMULATOR),true)
 	# Make valgrind happy.
 	LOCAL_CFLAGS += -DPURIFY
     LOCAL_LDLIBS += -ldl
+    LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
 endif
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libcrypto

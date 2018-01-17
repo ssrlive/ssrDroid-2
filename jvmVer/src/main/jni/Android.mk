@@ -115,7 +115,7 @@ LOCAL_C_INCLUDES:= $(LOCAL_PATH)/libancillary
 LOCAL_SRC_FILES:= Jni.cpp
 
 LOCAL_LDLIBS := -ldl -llog
-
+LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
 LOCAL_STATIC_LIBRARIES := cpufeatures libancillary
 
 include $(BUILD_SHARED_LIBRARY)
@@ -210,7 +210,7 @@ TUN2SOCKS_SOURCES := \
 LOCAL_MODULE := tun2socks
 
 LOCAL_LDLIBS := -ldl -llog
-
+LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
 LOCAL_SRC_FILES := $(addprefix badvpn/, $(TUN2SOCKS_SOURCES))
 
 include $(BUILD_EXECUTABLE)
