@@ -22,10 +22,14 @@
       </configuration>
     </facet>
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="jvmTarget" value="1.8" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="jvmVer_debug" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
           <option name="languageVersion" value="1.1" />
           <option name="apiVersion" value="1.1" />
           <option name="pluginOptions">
@@ -111,15 +115,18 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifest-checker" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
@@ -134,29 +141,32 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.github.orhanobut:hawk-1.19" level="project" />
-    <orderEntry type="library" name="com.android.support:support-vector-drawable-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="__local_aars__:/Users/ssrlive/Desktop/ShadowsocksRDroid/jvmVer/libs/org.xbill.dns_2.1.7.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-annotations:26.0.0-alpha1@jar" level="project" />
-    <orderEntry type="library" name="com.madgag.spongycastle:core:1.53.0.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:appcompat-v7-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.google.zxing:core:3.1.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-media-compat-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="net.glxn.qrgen:core:2.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:recyclerview-v7-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.google.code.gson:gson:2.3.1@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-ui-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="net.glxn.qrgen:android:2.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:transition-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-v4-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="__local_aars__:/Users/ssrlive/Desktop/ShadowsocksRDroid/jvmVer/libs/commons-checksum-0.9.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib:1.1.0@jar" level="project" />
-    <orderEntry type="library" name="org.jetbrains:annotations:13.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:design-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-compat-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-utils-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="com.android.support:support-fragment-26.0.0-alpha1" level="project" />
-    <orderEntry type="library" name="eu.chainfire:libsuperuser-1.0.0.201704021214" level="project" />
+    <orderEntry type="library" name="Gradle: net.glxn.qrgen:core:2.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:transition-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/ssrlive/Desktop/ShadowsocksRDroid/jvmVer/libs/org.xbill.dns_2.1.7.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.madgag.spongycastle:core:1.53.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: eu.chainfire:libsuperuser-1.0.0.201704021214" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-fragment-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: android.arch.core:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.3.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-media-compat-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:26.1.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-v4-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-compat-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: android.arch.lifecycle:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-core-ui-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.glxn.qrgen:android:2.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-core-utils-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.zxing:core:3.1.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/ssrlive/Desktop/ShadowsocksRDroid/jvmVer/libs/commons-checksum-0.9.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:design-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.orhanobut:hawk-1.19" level="project" />
+    <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime-1.0.0" level="project" />
   </component>
 </module>

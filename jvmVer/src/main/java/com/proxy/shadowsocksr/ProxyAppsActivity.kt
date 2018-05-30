@@ -28,14 +28,14 @@ class ProxyAppsActivity : AppCompatActivity(), AppsAdapter.OnItemClickListener
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proxy_apps)
-        toolbar = findViewById(R.id.toolbar) as Toolbar
+        toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         val ab = delegate.supportActionBar
         ab?.setDisplayShowHomeEnabled(true)
         ab?.setDisplayHomeAsUpEnabled(true)
         ab?.setSubtitle(R.string.proxy_tip)
 
-        rvApps = findViewById(R.id.rv_proxy_apps) as RecyclerView
+        rvApps = findViewById<RecyclerView>(R.id.rv_proxy_apps)
         rvApps!!.layoutManager = LinearLayoutManager(this)
         rvApps!!.setHasFixedSize(true)
         appLst = ArrayList<AppItem>()

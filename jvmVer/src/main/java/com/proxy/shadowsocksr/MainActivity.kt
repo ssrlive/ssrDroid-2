@@ -172,10 +172,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
     private fun setupUI()
     {
-        toolbar = findViewById(R.id.toolbar) as Toolbar
-        spinner = findViewById(R.id.spinner_nav) as Spinner
-        coordinatorLayout = findViewById(R.id.coordinatorlayout) as CoordinatorLayout
-        fab = findViewById(R.id.fab) as FloatingActionButton
+        toolbar = findViewById<Toolbar>(R.id.toolbar)
+        spinner = findViewById<Spinner>(R.id.spinner_nav)
+        coordinatorLayout = findViewById<CoordinatorLayout>(R.id.coordinatorlayout)
+        fab = findViewById<FloatingActionButton>(R.id.fab)
         //
         toolbar!!.setTitle(R.string.app_name)
         toolbar!!.setLogo(R.drawable.ic_stat_shadowsocks)
